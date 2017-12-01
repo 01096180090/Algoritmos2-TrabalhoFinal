@@ -15,7 +15,7 @@ public class ProgramaC_Alunos {
 	private static final String email = "";
 	private static final int idade = 0;
 	private static final String cidade = "";
-	
+
 	public static void main(String[] args) {
 		FileReader arquivo = null;
 		try {
@@ -25,10 +25,10 @@ public class ProgramaC_Alunos {
 			System.exit(1);
 		}
 		ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile(arquivo);
-		
+
 		System.out.println(lista.search(new SearchByName(name)));
 		System.out.println(lista.search(new SearchByEmail(email)));
-		System.out.println(lista.search(new SearchByAgeAndCity(idade,cidade)));
+		System.out.println(lista.search(new SearchByAgeAndCity(idade, cidade)));
 	}
 
 }
